@@ -1,0 +1,36 @@
+import pandas as pd
+from sklearn . ensemble import RandomForestClassifier
+from sklearn . metrics import classification_report , f1_score
+5
+from sklearn . preprocessing import LabelEncoder
+# Load data
+train_data = pd . read_csv (’train .csv ’)
+test_data = pd . read_csv (’test .csv ’)
+# Assuming ’Education ’ is the target column and needs to be predicted
+X_train = train_data . drop ([ ’Education ’] , axis =1)
+y_train = train_data [’Education ’]
+# Encoding categorical variables if any
+for column in X_train . columns :
+if X_train [ column ]. dtype == type ( object ) : # if column is categorical
+le = LabelEncoder ()
+X_train [ column ] = le . fit_transform ( X_train [ column ])
+if column in test_data . columns :
+test_data [ column ] = le . transform ( test_data [ column ])
+# Prepare test data - assuming it has the same structure minus the target
+X_test = test_data . drop ([ ’Education ’] , axis =1)
+# Create a RandomForest Classifier
+rf_model = RandomForestClassifier ( n_estimators =100 , random_state =42)
+# Train the model
+rf_model . fit ( X_train , y_train )
+# Predict on the training set to see in - sample accuracy
+train_predictions = rf_model . predict ( X_train )
+print (" Training ␣F1␣ Score :", f1_score ( y_train , train_predictions , average =’weighted ’) )
+# Predict on test set
+test_predictions = rf_model . predict ( X_test )
+# If test labels are available , we can calculate the F1 score
+if ’Education ’ in test_data . columns :
+y_test = test_data [’Education ’]
+print (" Test ␣F1␣ Score :", f1_score ( y_test , test_predictions , average =’weighted ’) )
+# Classification report
+if ’Education ’ in test_data . columns :
+print ( classification_report ( y_test , test_predictions ) )
