@@ -1,0 +1,59 @@
+Overview
+Classification refers to the task of classifying the given data into different categories. For example-
+
+Given a list of emails, classify them as spam or non-spam (Binary Classification)
+Given images of handwritten digits, classify them into respective classes 0 to 9 (Multi-Class classification)
+If you have seen the “issues” section in a GitHub repository, labeling each issue as a ‘bug’, ‘enhancement’, ‘feature’ etc (Multi-Label Classification)
+… and so on.
+Elections in the World’s largest democracy are unique worldwide. In this assignment, you are given a dataset of the recent State and UT election winners across India for different states and UTs. The dataset is sourced from the Election Commission of India website. Based on different features, your task is to predict the Education Level of the Winners of the State Elections (Multi-Class Classification).
+
+Start
+
+Mar 27, 2024
+Close
+Apr 12, 2024
+Description
+ML Basics
+
+Machine Learning has seen tremendous growth in recent years. Thanks to its capabilities of learning from data. Some basic techniques and libraries are shared herewith as a pre-requisite for this assignment. Considering the time constraint, you can just focus on the components needed for the assignment.
+
+Pandas Intro Tutorials (For data analysis and representation)
+
+Getting started tutorials — pandas 2.2.1 documentation
+A Gentle Visual Intro to Data Analysis in Python Using Pandas – Jay Alammar
+DataFrame — pandas 2.2.1 documentation
+All about Dataframe
+NumPy
+Numpy
+A Visual Intro to NumPy and Data Representation – Jay Alammar
+Scikit-learn
+scikit-learn (for ML models, evaluation metrics, etc)
+Matplotlib
+Seaborn
+Data Visualization
+TASKS -
+You are provided with a training dataset and a test dataset. Your main task is to train a machine-learning model of your choice (SVM, KNN, DecisionTree, RandomForest, or any other) on this dataset and perform multi-class classification. You can only use the libraries mentioned in the Rules section. No deep learning methods/libraries are allowed (For example- ANN, Pytorch, Keras, Tensorflow, etc).
+
+Evaluation
+Evaluation Metric
+Your trained model will be evaluated on the Test dataset. The evaluation metric to be used is the f1-score. To learn more about the f1-score, see Precision, Recall, & F1 Score Intuitively Explained, and the official doc.
+You can evaluate and improve your model on the test dataset. The test dataset is composed of two components- 50% public and 50% private. Your private Leaderboard score will be shown two days before the end of the competition. Meanwhile, you can work on improving your Public score.
+A maximum of 5 submissions per day is allowed. Use them wisely.
+
+Data Visualization
+A separate short LaTeX report is to be submitted in PDF format. In it:
+
+mention the models used along with the hyperparameters (For example- the value of ‘k’ if K-Nearest Neighbours is used, or the validation-training split ratio if a separate validation set is used, or the kernel type if SVM is used, etc).
+For Data analysis, plot
+The percentage distribution of parties with candidates having the most criminal records.
+The percentage distribution of parties with the most wealthy candidates.
+Any other informative plot (Bonus points)
+Add all the plots and graphs obtained in the data analysis section. Add the final Leaderboard Score and Rank in the Results section of the report.
+
+Change the name of the report to roll number_name. For example 220514_Kawaljeet_Singh.pdf
+The link for submission of the LaTeX report will be shared soon.
+
+Competition Details
+Each member should have a kaggle account to participate in the competition.
+Also, only 1 member in each team will be there.
+Keep your Roll Number as your team name.
